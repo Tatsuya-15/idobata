@@ -3,7 +3,7 @@
   <%= link_to post_image_path(post_image.id) do %>
     <%= attachment_image_tag post_image, :image %>
   <% end %>
-  
+
   <p>投稿画像：<%= post_image.image %></p>
   <p>タイトル：<%= post_image.title %></p>
   <p>説明：<%= post_image.caption %></p>

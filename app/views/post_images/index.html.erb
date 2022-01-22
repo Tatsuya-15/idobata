@@ -1,11 +1,11 @@
 <% @post_images.each do |post_image| %>
 <div>
   <%= link_to post_image_path(post_image.id) do %>
-    <%= attachment_image_tag post_image, :image %>
+    <%= attachment_image_tag post_image, :image ,size: "300x300" %>
   <% end %>
 
-  <p>投稿画像：<%= post_image.image %></p>
+  <!-- <p>投稿画像：<%= post_image.image %></p> -->
   <p>タイトル：<%= post_image.title %></p>
-  <p>説明：<%= post_image.caption %></p>
+  <p>説明：<%= post_image.caption%></p>
 </div>
 <% end %>

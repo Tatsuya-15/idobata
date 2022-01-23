@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
   resources :post_images
+  get 'homes/about'
 end

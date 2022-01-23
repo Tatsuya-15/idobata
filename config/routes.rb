@@ -4,13 +4,13 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
-  
+
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
     passwords:     'admins/passwords',
     registrations: 'admins/registrations'
   }
-  
+
   root to: 'homes#top'
-  resources :post_images, only: [:new, :create, :index, :show, :destroy]
+  resources :post_images
 end

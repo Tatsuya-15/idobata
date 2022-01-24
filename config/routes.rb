@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     registrations: 'admins/registrations'
   }
 
-  root to: 'homes#top'
+  root to: 'post_images#index'
   resources :post_images
   get 'homes/about'
 end

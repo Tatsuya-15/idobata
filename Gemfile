@@ -65,3 +65,5 @@ gem 'devise'
 
 gem "refile", require: "refile/rails", github: 'manfe/refile' #ファイルをアップロードできるようにするgem
 gem "refile-mini_magick" #アップロードした画像のリサイズを行えるgem
+
+gem 'rails-i18n'

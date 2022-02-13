@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      post_image:
+        image_id:
+        title:
+        caption:

@@ -1,11 +1,61 @@
-<h2>Posted Index</h2>
+<!-- header -->
+<header>
+  <h1 class="heading">
+    <a href="index.html">
+      井戸端遊戯.inc
+    </a>
+  </h1>
+  <div class="social">
+    <i class="fab fa-twitter-square"></i>
+  </div>
+</header>
+<!--<nav>-->
+<!--  <ul class="nav-list">-->
+<!--    <li class="nav-list-item">Home</li>-->
+<!--    <li class="nav-list-item">About</li>-->
+<!--    <li class="nav-list-item">Topic</li>-->
+<!--  </ul>-->
+<!--</nav>-->
 
+<!-- main -->
+<main>
+  <section class="blog">
+    <h2 class="blog-heading">Recent Blogs</h2>
+    <!-- 投稿一覧 -->
 <% @post_images.each do |post_image| %>
-<div>
-  <%= link_to post_image_path(post_image.id) do %>
-    <%= attachment_image_tag post_image, :image ,size: "300x300" %>
-  <% end %>
-  <p>Posted Date：<%= post_image.created_at.strftime('%Y/%m/%d') %></p>
-  <p>Title：<%= post_image.title %></p>
-</div>
-<% end %>
+    <div class="blog-box">
+      <div class="blog-item">
+          <%= link_to post_image_path(post_image.id) do %>
+            <%= attachment_image_tag post_image, :image ,size: "300x300", class: 'blog-image' %>
+          <% end %>
+        <section class="blog-text">
+          <h3 class="blog-text-heading">
+              <p><%= post_image.title %></p>
+          </h3>
+             <p class="blog-date"><%= post_image.created_at.strftime('%Y/%m/%d') %></p>
+        </section>
+      </div>
+    </div>
+    <% end %>
+    <div class="pagination">
+      <p><<</p>
+      <p><</p>
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>></p>
+      <p>>></p>
+    </div>
+  </section>
+
+
+    <!-- 「原型」投稿一覧 -->
+<!--<% @post_images.each do |post_image| %>-->
+<!--<div>-->
+<!--  <%= link_to post_image_path(post_image.id) do %>-->
+<!--    <%= attachment_image_tag post_image, :image ,size: "300x300" %>-->
+<!--  <% end %>-->
+<!--  <p>Posted Date：<%= post_image.created_at.strftime('%Y/%m/%d') %></p>-->
+<!--  <p>Title：<%= post_image.title %></p>-->
+<!--</div>-->
+<!--<% end %>-->

@@ -8,7 +8,7 @@
    <%= link_to "Top", post_images_path%>
   <% if @post_image.admin == current_admin %>
     <%= link_to "Edit", edit_post_image_path(@post_image) %>
-    <%= link_to "De", post_image_path(@post_image), method: :delete %>
+    <%= link_to "Delete", post_image_path(@post_image), method: :delete %>
   <% end %>
 
 

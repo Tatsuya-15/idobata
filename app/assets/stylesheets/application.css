@@ -184,18 +184,6 @@ main {
 .sidebar-contents {
   padding: 50px 0;
 }
-.popular-text,
-.categories-text {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #f7f7f7;
-  margin-bottom: 5px;
-}
-.popular-text:last-child,
-.categories-text:last-child {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
 
 .instagram .sidebar-contents {
   display: flex;
